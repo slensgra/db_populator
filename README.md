@@ -4,7 +4,7 @@ Database Populator
 At a glance
 -----------
 
-To run the command: `m populate_db`
+To run the command: `python manage.py populate_db`
 
 ___You have to run the command on a completely empty database with migrations applied, else it will crash.___
 
