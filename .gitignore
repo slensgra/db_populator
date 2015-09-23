@@ -1,0 +1,4 @@
+*.swp
+*.swo
+
+db_populator.egg-info
