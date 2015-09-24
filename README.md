@@ -12,6 +12,7 @@ Description
 -----------
 
 Applys a simple, guided DFS technique to traverse a schema, and create a concrete / compact database.
+The meat of the code base runs using a modified version of [django dynamic fixture](https://github.com/paulocheque/django-dynamic-fixture) by Paulo Cheque.
 
 The populate\_db management command iterates through all models recognized by the ORM,
 attempting to save each instance to the database. If the instance has a non-empty
