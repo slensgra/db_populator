@@ -3,6 +3,8 @@ Database Populator
 
 At a glance
 -----------
+To install the command: `pip install db-populator`
+Place `'db_populator'` in your app's `INSTALLED_APPS` list
 
 To run the command: `python manage.py populate_db`
 
