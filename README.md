@@ -3,8 +3,10 @@ Database Populator
 
 At a glance
 -----------
+To install the command: `pip install db-populator` (only available for python 3).
+Then, place `'db_populator'` in your app's `INSTALLED_APPS` list.
 
-To run the command: `m populate_db`
+To run the command: `python manage.py populate_db`.
 
 ___You have to run the command on a completely empty database with migrations applied, else it will crash.___
 
@@ -12,6 +14,7 @@ Description
 -----------
 
 Applys a simple, guided DFS technique to traverse a schema, and create a concrete / compact database.
+The meat of the code base runs using a modified version of [django dynamic fixture](https://github.com/paulocheque/django-dynamic-fixture) by Paulo Cheque.
 
 The populate\_db management command iterates through all models recognized by the ORM,
 attempting to save each instance to the database. If the instance has a non-empty
