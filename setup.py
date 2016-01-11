@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='db_populator',
-    version='1.0.0',
+    version='1.0.1',
     description="Port of DDF for algorithmically creating an initial dataset",
     long_description=open("README.md").read(),
     author='Samuel Lensgraf',

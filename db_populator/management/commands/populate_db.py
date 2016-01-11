@@ -11,13 +11,18 @@ from db_populator.db_populator_conf import REQUIREMENTS
 
 class Command(BaseCommand):
     # returns the log level based on the input provided by the user
-    def handle(self, *args, **options):
-        if 'verbose' in args:
-            logging.disable(logging.DEBUG)
-        else:
-            logging.disable(logging.CRITICAL)
+    def add_arguments(self, parser):
+        parser.add_argument('--verbose', dest='verbose', action='store_true')
 
+    def handle(self, *args, **options):
+        self._init_logging(**options)
         self._populate_db()
+
+    def _init_logging(self, **options):
+        verbose = options.get('verbose', False)
+        logging.basicConfig(
+            level=(logging.DEBUG if verbose else logging.INFO)
+            )
 
     def _in_requirements(self, requirements, item):
         for i in requirements:
